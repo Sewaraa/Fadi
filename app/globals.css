@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+h1,h2,h3{
+    font-family: var(--font-playfair);
+}
+@layer base{
+    body{
+        font-family: var(--font-inter),
+        system-ui ,sans-serif
+    }
+}
+
+@layer utilities {
+  /* ===== Marquee Speeds ===== */
+  @keyframes marquee-slow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-medium {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-fast {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee-slow {
+    animation: marquee-slow 32s linear infinite;
+  }
+
+  .animate-marquee-medium {
+    animation: marquee-medium 22s linear infinite;
+  }
+
+  .animate-marquee-fast {
+    animation: marquee-fast 14s linear infinite;
+  }
+}
+
+  @keyframes sparkle {
+    0% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0); }
+  }
+  .animate-sparkle {
+    animation: sparkle 2s linear infinite;
+  }
+
+
+@layer utilities {
+  @keyframes smokeSlow {
+    0% {
+      transform: translateX(-5%) translateY(0);
+    }
+    50% {
+      transform: translateX(5%) translateY(-6px);
+    }
+    100% {
+      transform: translateX(-5%) translateY(0);
+    }
+  }
+
+  @keyframes smokeMedium {
+    0% {
+      transform: translateX(0%) translateY(0);
+    }
+    50% {
+      transform: translateX(-6%) translateY(8px);
+    }
+    100% {
+      transform: translateX(0%) translateY(0);
+    }
+  }
+
+  @keyframes smokeFast {
+    0% {
+      transform: translateX(6%) translateY(0);
+    }
+    50% {
+      transform: translateX(-6%) translateY(-10px);
+    }
+    100% {
+      transform: translateX(6%) translateY(0);
+    }
+  }
+
+  .animate-smoke-slow {
+    animation: smokeSlow 18s ease-in-out infinite;
+  }
+
+  .animate-smoke-medium {
+    animation: smokeMedium 14s ease-in-out infinite;
+  }
+
+  .animate-smoke-fast {
+    animation: smokeFast 10s ease-in-out infinite;
+  }
+}

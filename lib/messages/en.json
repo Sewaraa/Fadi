@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "language":"EN",
+    "home": "Home",
+    "services": "Services",
+    "projects":"Projects",
+    "about":"About Us",
+    "contact": "Get in touch"
+  },
+  "hero": {
+    "title": "We deliver smart ideas for real digital success",
+    "coremessage":"We help you grow your business through innovative, practical, and scalable digital solutions tailored to your needs",
+    "buttontextn1":"Discover our services",
+    "buttontextn2":"Schedule a Consultation"
+  },
+  "ScrollingText": [
+    "Practical experience in software projects",
+    "Commitment to quality and deadlines",
+    "Custom solutions according to client needs",
+    "Continuous technical support after delivery"
+  ],
+   "Services": {
+  "title": "Our Services",
+  "ourmessage": "We provide a comprehensive range of software solutions carefully designed to help your business grow and achieve digital transformation efficiently.",
+
+  "items": [
+    {
+      "id": "web-development",
+      "title": "Website Development",
+      "description": "Design and development of modern, fast, and fully responsive websites using the latest technologies.",
+      "benefit": "A professional website that strengthens your digital presence and builds customer trust.",
+      "icon": "website"
+    },
+    {
+      "id": "admin-systems",
+      "title": "Administrative Systems",
+      "description": "Custom-built systems to manage business operations, organize data, and improve workflow efficiency.",
+      "benefit": "Better organization, fewer errors, and increased productivity.",
+      "icon": "dashboard"
+    },
+    {
+      "id": "ecommerce",
+      "title": "E-commerce Solutions",
+      "description": "Development of secure and fully integrated online stores with seamless user experience and payment gateways.",
+      "benefit": "Increase sales and reach a wider audience of customers.",
+      "icon": "shopping-cart"
+    },
+    {
+      "id": "automation",
+      "title": "Business Automation",
+      "description": "Transform manual processes into automated digital systems to reduce effort and operational costs.",
+      "benefit": "Save time, reduce costs, and improve overall performance.",
+      "icon": "automation"
+    }
+  ]
+}
+}

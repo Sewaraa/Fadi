@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "language": "FR",
+    "home": "Accueil",
+    "services": "Services",
+    "projects": "Projets",
+    "about": "À propos de nous",
+    "contact": "Contactez-nous"
+  },
+  "hero": {
+    "title": "Nous livrons des idées intelligentes pour un véritable succès numérique",
+    "coremessage": "Nous vous aidons à développer votre entreprise grâce à des solutions numériques innovantes, pratiques et évolutives adaptées à vos besoins",
+    "buttontextn1": "Découvrez nos services",
+    "buttontextn2":"Planifier une consultation"
+  },
+  "ScrollingText": [
+    "Expérience pratique dans les projets logiciels",
+    "Engagement envers la qualité et les délais",
+    "Solutions personnalisées selon les besoins du client",
+    "Support technique continu après livraison"
+  ],
+    "Services": {
+  "title": "Nos Services",
+  "ourmessage": "Nous proposons une gamme complète de solutions logicielles soigneusement conçues pour aider votre entreprise à se développer et réussir sa transformation numérique.",
+
+  "items": [
+    {
+      "id": "web-development",
+      "title": "Développement de sites web",
+      "description": "Conception et développement de sites web modernes, rapides et entièrement responsives utilisant les technologies les plus récentes.",
+      "benefit": "Un site professionnel qui renforce votre présence numérique et inspire confiance aux clients.",
+      "icon": "website"
+    },
+    {
+      "id": "admin-systems",
+      "title": "Systèmes de gestion",
+      "description": "Création de systèmes personnalisés pour gérer les opérations internes, organiser les données et optimiser les flux de travail.",
+      "benefit": "Meilleure organisation, réduction des erreurs et augmentation de la productivité.",
+      "icon": "dashboard"
+    },
+    {
+      "id": "ecommerce",
+      "title": "Solutions e-commerce",
+      "description": "Création de boutiques en ligne sécurisées et complètes avec une expérience utilisateur fluide et des solutions de paiement intégrées.",
+      "benefit": "Augmenter les ventes et atteindre de nouveaux clients.",
+      "icon": "shopping-cart"
+    },
+    {
+      "id": "automation",
+      "title": "Automatisation des processus",
+      "description": "Transformation des processus manuels en systèmes numériques automatisés afin de réduire les efforts et les coûts.",
+      "benefit": "Gain de temps, réduction des coûts et amélioration des performances globales.",
+      "icon": "automation"
+    }
+  ]
+}
+
+}
