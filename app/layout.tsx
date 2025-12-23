@@ -42,17 +42,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params,
+
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+
 }) {
-  const isRTL = params.locale === "ar";
+  
 
   return (
     <html
-      lang={params.locale}
-      dir={isRTL ? "rtl" : "ltr"}
+    
       className={`${inter.variable} ${arabic.variable} ${playfair.variable}`}
     >
       <body className="bg-black text-white antialiased">
