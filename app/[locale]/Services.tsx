@@ -2,77 +2,75 @@
 
 import { useParams } from 'next/navigation'
 import { messages } from '@/lib/i18n'
-import {
-  Code,
-  LayoutDashboard,
-  ShoppingCart,
-  Settings,
-} from 'lucide-react'
+import { motion, Variants } from 'framer-motion'
+import { Code, LayoutDashboard, ShoppingCart, Settings } from 'lucide-react'
+import type { ReactElement } from 'react'
 
-const iconsMap: Record<string, React.ReactNode> = {
-  website: <Code size={36} />,
-  dashboard: <LayoutDashboard size={36} />,
-  'shopping-cart': <ShoppingCart size={36} />,
-  automation: <Settings size={36} />,
+const iconsMap: Record<string, ReactElement> = {
+  website: <Code size={34} />,
+  dashboard: <LayoutDashboard size={34} />,
+  'shopping-cart': <ShoppingCart size={34} />,
+  automation: <Settings size={34} />,
 }
 
-export default function Services() {
+type IconKey = 'website' | 'dashboard' | 'shopping-cart' | 'automation'
+
+interface ServiceItem {
+  id: string
+  title: string
+  description: string
+  benefit: string
+  icon: IconKey | string
+}
+
+const cardReveal: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+}
+
+export default function ServicesSection() {
   const params = useParams()
   const locale = (params?.locale ?? 'en') as 'en' | 'ar' | 'fr'
   const t = messages[locale] ?? messages.en
 
   return (
-    <section className="relative py-28 bg-black overflow-hidden">
-      {/* subtle background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.08),transparent_80%)]" />
+    <section className="relative py-32 overflow-hidden
+      bg-gradient-to-b from-black/90 via-yellow-900/10 to-black/80
+    ">
+      {/* Gold Glow Overlay to blend with hero */}
+      <div className="absolute inset-0 bg-black pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             {t.Services.title}
           </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
+          <p className="text-gray-300 max-w-3xl mx-auto text-lg">
             {t.Services.ourmessage}
           </p>
         </div>
 
-        {/* Cards */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-          {t.Services.items.map((service: any) => (
-            <div
+        
+          {(t.Services.items as ServiceItem[]).map((service, i: number) => (
+            <motion.div
               key={service.id}
-              className="
-                group relative rounded-2xl p-8
-                bg-white/5 backdrop-blur-xl
-                border border-white/10
-                hover:border-yellow-500/40
-                transition-all duration-500
-                hover:-translate-y-2
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="relative h-full rounded-2xl p-8 overflow-hidden
+                bg-black/20 backdrop-blur-md border border-yellow-500/20 shadow-lg
               "
             >
-              {/* Glow on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.15),transparent_70%)]" />
-
-              <div className="relative z-10">
-                <div className="mb-6 text-yellow-400">
-                  {iconsMap[service.icon]}
-                </div>
-
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {service.title}
-                </h3>
-
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-
-                <p className="text-sm text-gray-300 font-medium">
-                  {service.benefit}
-                </p>
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <div className="text-yellow-400 mb-6">{iconsMap[service.icon]}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
+                <span className="text-sm text-yellow-400 font-medium">{service.benefit}</span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

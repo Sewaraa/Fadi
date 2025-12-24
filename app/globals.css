@@ -11,7 +11,6 @@ h1,h2,h3{
 }
 
 @layer utilities {
-  /* ===== Marquee Speeds ===== */
   @keyframes marquee-slow {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -40,14 +39,14 @@ h1,h2,h3{
   }
 }
 
-  @keyframes sparkle {
-    0% { opacity: 0; transform: scale(0); }
-    50% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(0); }
-  }
-  .animate-sparkle {
-    animation: sparkle 2s linear infinite;
-  }
+@keyframes sparkle {
+  0% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0); }
+}
+.animate-sparkle {
+  animation: sparkle 2s linear infinite;
+}
 
 
 @layer utilities {
@@ -99,3 +98,13 @@ h1,h2,h3{
     animation: smokeFast 10s ease-in-out infinite;
   }
 }
+
+@keyframes float {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-30px) }
+  100% { transform: translateY(0) }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
