@@ -52,7 +52,7 @@ export default function FeaturesTypingBoxes() {
 
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-start gap-4 px-4 pt-32
-      bg-gradient-to-b from-black/90 via-yellow-900/20 to-black/70
+      bg-gradient-to-b from-black/70 via-yellow-900/20 to-black/70
       overflow-hidden"
     >
       {/* Gold Glow / Subtle Particles */}

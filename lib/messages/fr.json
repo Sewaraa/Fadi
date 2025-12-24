@@ -53,6 +53,14 @@
       "icon": "automation"
     }
   ]
-}
-
+},
+"footer": {
+    "description": "Votre solution idéale pour des projets web modernes et des services créatifs.",
+    "linksTitle": "Liens rapides",
+    "contactTitle": "Contact",
+    "address": "123 rue Principale, Ville, Pays",
+    "phone": "+1 234 567 890",
+    "email": "info@smartline.com",
+    "rights": "Tous droits réservés."
+  }
 }

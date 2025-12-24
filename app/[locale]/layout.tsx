@@ -10,8 +10,8 @@ export default async function LocaleLayout({
   const isRTL = locale === "ar";
 
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
-      <body className="antialiased bg-black text-white">{children}</body>
-    </html>
+    <div lang={locale} dir={isRTL ? "rtl" : "ltr"} className="antialiased bg-black text-white">
+      {children}
+    </div>
   );
 }

@@ -44,10 +44,22 @@ export default function Navbar() {
   
 const navLinks = [
   { name: t.nav.home, href: '/' },
-  { name: t.nav.services, href: '/Services' },
+  { name: t.nav.services, href: '#services' },
   { name: t.nav.projects, href: '/Projects' },
   { name: t.nav.about, href: '/About' },
 ]
+
+const localize = (href: string) => {
+  try {
+    if (!href.startsWith('/')) return href
+    const segments = href.split('/')
+    if (['en', 'ar', 'fr'].includes(segments[1])) return href
+    if (href === '/') return `/${locale}`
+    return `/${locale}${href}`
+  } catch (e) {
+    return href
+  }
+}
 
   return (
     <>
@@ -94,7 +106,7 @@ const navLinks = [
               {navLinks.map(link => (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  href={localize(link.href)}
                   className="opacity-80 hover:opacity-100 transition"
                 >
                   {link.name}
@@ -102,7 +114,7 @@ const navLinks = [
               ))}
 
               <Link
-                href="/Contact"
+                href={localize('/contact')}
                 className="rounded border border-gray-200 px-4 py-2 text-sm font-medium hover:bg-white hover:text-black transition"
               >
                 {t.nav.contact}
@@ -127,7 +139,7 @@ const navLinks = [
           {navLinks.map(link => (
             <Link
               key={link.name}
-              href={link.href}
+              href={localize(link.href)}
               onClick={() => setMenuOpen(false)}
               className="opacity-80 hover:opacity-100 transition"
             >
@@ -135,7 +147,7 @@ const navLinks = [
             </Link>
           ))}
           <Link
-            href="/Contact"
+            href={localize('/contact')}
             onClick={() => setMenuOpen(false)}
             className="mt-6 rounded border border-gray-700 py-4 text-center font-medium hover:bg-white hover:text-black transition"
           >

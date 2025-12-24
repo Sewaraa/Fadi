@@ -7,6 +7,7 @@ import {
   Playfair_Display,
   Noto_Sans_Arabic,
 } from "next/font/google";
+import Footer from "./[locale]/Footer";
 
 /* ================== Fonts ================== */
 
@@ -57,6 +58,7 @@ export default function RootLayout({
       <body className="bg-black text-white antialiased">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

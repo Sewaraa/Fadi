@@ -34,7 +34,7 @@ export default function ServicesSection() {
   const t = messages[locale] ?? messages.en
 
   return (
-    <section className="relative py-32 overflow-hidden
+    <section id="services" className="relative py-32 overflow-hidden
       bg-gradient-to-b from-black/90 via-yellow-900/10 to-black/80
     ">
       {/* Gold Glow Overlay to blend with hero */}
@@ -53,24 +53,27 @@ export default function ServicesSection() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         
           {(t.Services.items as ServiceItem[]).map((service, i: number) => (
-            <motion.div
-              key={service.id}
-              variants={cardReveal}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="relative h-full rounded-2xl p-8 overflow-hidden
-                bg-black/20 backdrop-blur-md border border-yellow-500/20 shadow-lg
-              "
-            >
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="text-yellow-400 mb-6">{iconsMap[service.icon]}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
-                <span className="text-sm text-yellow-400 font-medium">{service.benefit}</span>
-              </div>
-            </motion.div>
+           <motion.div
+  key={service.id}
+  variants={cardReveal}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+  transition={{ delay: i * 0.1 }}
+  whileHover={{ scale: 1.05 }}        // تكبير عند الهور
+  whileTap={{ scale: 0.97 }}          // تصغير لطيف عند اللمس
+  className="relative h-full rounded-2xl p-8 overflow-hidden
+    bg-black/20 backdrop-blur-md border border-yellow-500/20 shadow-lg
+    cursor-pointer transition-all duration-300 ease-out hover:shadow-2xl hover:border-yellow-400/40
+  "
+>
+  <div className="relative z-10 flex flex-col items-center text-center">
+    <div className="text-yellow-400 mb-6">{iconsMap[service.icon]}</div>
+    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+    <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
+    <span className="text-sm text-yellow-400 font-medium">{service.benefit}</span>
+  </div>
+</motion.div>
           ))}
         </div>
       </div>
