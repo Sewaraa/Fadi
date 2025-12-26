@@ -13,13 +13,16 @@
     "buttontextn1": "Découvrez nos services",
     "buttontextn2":"Planifier une consultation"
   },
-  "features": [
-    "Expérience pratique dans les projets logiciels",
-    "Engagement envers la qualité et les délais",
-    "Solutions personnalisées selon les besoins du client",
-    "Support technique continu après livraison"
-  ],
-    "Services": {
+  "features": {
+    "title":"Pourquoi nous choisir?",
+    "items": [
+      "Expérience pratique dans les projets logiciels",
+      "Engagement envers la qualité et les délais",
+      "Solutions personnalisées selon les besoins du client",
+      "Support technique continu après livraison"
+    ]
+  },
+  "Services": {
   "title": "Nos Services",
   "ourmessage": "Nous proposons une gamme complète de solutions logicielles soigneusement conçues pour aider votre entreprise à se développer et réussir sa transformation numérique.",
 
@@ -53,6 +56,39 @@
       "icon": "automation"
     }
   ]
+},
+"howWeWork": {
+  "title": "Notre Méthode de Travail?",
+  "subtitle": "Un processus clair et structuré, de l’idée à la livraison",
+  "steps": [
+    {
+      "title": "Première Consultation",
+      "description":
+        "Nous comprenons votre vision, vos objectifs et les besoins du projet."
+    },
+    {
+      "title": "Analyse & Planification",
+      "description":
+        "Nous étudions les exigences et préparons une stratégie adaptée."
+    },
+    {
+      "title": "Exécution",
+      "description":
+        "Nous lançons le développement selon le plan validé."
+    },
+    {
+      "title": "Tests & Livraison",
+      "description":
+        "Nous testons rigoureusement et livrons un résultat final de haute qualité."
+    },
+    {
+      "title": "Support Après Livraison",
+      "description":
+        "Un support et une maintenance sont assurés selon la formule choisie."
+    }
+  ],
+  "footer":
+    "Le délai et le support dépendent de la portée du projet et du service sélectionné."
 },
 "footer": {
     "description": "Votre solution idéale pour des projets web modernes et des services créatifs.",

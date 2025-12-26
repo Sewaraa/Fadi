@@ -34,7 +34,7 @@ export default function ServicesSection() {
   const t = messages[locale] ?? messages.en
 
   return (
-    <section id="services" className="relative py-32 overflow-hidden
+    <section id="services" className="relative py-8 overflow-hidden
       bg-gradient-to-b from-black/90 via-yellow-900/10 to-black/80
     ">
       {/* Gold Glow Overlay to blend with hero */}
@@ -42,12 +42,20 @@ export default function ServicesSection() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <motion.h2 
+          initial={{opacity:0,x:20}}
+          animate={{opacity:1,x:0}}
+          transition={{duration:0.8}}
+          className="text-4xl md:text-6xl font-bold text-gray-200 mb-6">
             {t.Services.title}
-          </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+          </motion.h2>
+          <motion.p 
+           initial={{opacity:0,x:-20}}
+          animate={{opacity:1,x:0}}
+          transition={{duration:0.8}}
+          className="text-gray-300 max-w-3xl mx-auto text-lg">
             {t.Services.ourmessage}
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -60,8 +68,8 @@ export default function ServicesSection() {
   whileInView="show"
   viewport={{ once: true }}
   transition={{ delay: i * 0.1 }}
-  whileHover={{ scale: 1.05 }}        // تكبير عند الهور
-  whileTap={{ scale: 0.97 }}          // تصغير لطيف عند اللمس
+  whileHover={{ scale: 1.05 }}        
+  whileTap={{ scale: 0.97 }}          
   className="relative h-full rounded-2xl p-8 overflow-hidden
     bg-black/20 backdrop-blur-md border border-yellow-500/20 shadow-lg
     cursor-pointer transition-all duration-300 ease-out hover:shadow-2xl hover:border-yellow-400/40

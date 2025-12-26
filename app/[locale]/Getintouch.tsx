@@ -33,7 +33,11 @@ export default function ContactCTA() {
       : 'Start the conversation'
 
   return (
-    <section className="relative w-full py-32 px-4 overflow-hidden">
+    <motion.section 
+    initial={{opacity:0,y:-1}}
+    animate={{opacity:1,y:0}}
+    transition={{duration:0.8}}
+    className="relative w-full py-22 px-4 overflow-hidden">
       
       {/* Animated gold waves */}
       <motion.div
@@ -59,7 +63,7 @@ export default function ContactCTA() {
           rounded-[2.5rem]
           bg-black/50 backdrop-blur-xl
           border border-yellow-500/30
-          px-10 py-20 md:px-20
+          px-10 py-10 md:px-12
           text-center
           shadow-[0_0_80px_rgba(212,175,55,0.15)]
         "
@@ -109,6 +113,6 @@ export default function ContactCTA() {
           </motion.button>
         </Link>
       </motion.div>
-    </section>
+    </motion.section>
   )
 }

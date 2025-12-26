@@ -4,13 +4,17 @@ import Services from './[locale]/Services'
 
 import FeaturesTyping from'./[locale]/Features'
 import ContactCTA from './[locale]/Getintouch'
+import SectionDividerDots from './[locale]/Dots'
+import HowWeWork from './[locale]/Howwework'
 
 export default function LocaleHome() {
   return (  <>
     <HomeSection />
    
-    <Services/>
+    <SectionDividerDots/>
     <FeaturesTyping/>
+    <HowWeWork/>
+    <Services/>
     <ContactCTA/>
     
   </>)
