@@ -38,7 +38,7 @@ export default function Footer() {
           <Link href={`mailto:${t.footer.email || 'Smartline@smartline-sy.com'}`} className="text-gray-300">{t.footer.email || 'Smartline@smartline-sy.com'}</Link>
            <div className="flex gap-4 mt-4">
             <a href="https://www.facebook.com/share/17tdVbooPi/" className="hover:text-yellow-400 transition"><FaFacebookF /></a>
-            <a href="https://www.instagram.com" className="hover:text-yellow-400 transition"><FaInstagram /></a>
+            <a href="https://www.instagram.com/Smartline332" className="hover:text-yellow-400 transition"><FaInstagram /></a>
             <a href="https://www.linkedin.com/in/fadi-shalhoub-93a0803a3" className="hover:text-yellow-400 transition"><FaLinkedinIn /></a>
             <a href="https://t.me/smartline332" className="hover:text-yellow-400 transition"><FaTelegram/></a>
           </div>

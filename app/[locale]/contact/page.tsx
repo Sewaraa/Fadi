@@ -1,9 +1,10 @@
-"use client"
+'use client'
 
 import { useParams } from 'next/navigation'
 import { messages } from '@/lib/i18n'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 export default function ContactPage() {
   const params = useParams()
@@ -12,6 +13,8 @@ export default function ContactPage() {
 
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -19,8 +22,23 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
-    setFormData({ name: '', email: '', message: '' })
+    setLoading(true)
+    setError(false)
+
+    emailjs.send(
+      'service_agq52t3',       // من حساب EmailJS
+      'template_258uvg5',      // من حساب EmailJS
+      formData,
+      'WYd3K3XFbb7g9Zdbk'        // من حساب EmailJS
+    ).then(() => {
+      setSubmitted(true)
+      setFormData({ name: '', email: '', message: '' })
+      setLoading(false)
+    }).catch((err) => {
+      console.error(err)
+      setError(true)
+      setLoading(false)
+    })
   }
 
   return (
@@ -28,8 +46,12 @@ export default function ContactPage() {
       bg-gradient-to-b from-black/90 via-yellow-900/10 to-black/80
     ">
       <div className="max-w-3xl w-full text-center mb-12 pt-32">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{t.nav.contact}</h1>
-        <p className="text-gray-300 text-lg">{t.footer.description}</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          {t.nav.contact}
+        </h1>
+        <p className="text-gray-300 text-lg">
+          {t.footer.description}
+        </p>
       </div>
 
       <div className="w-full max-w-3xl flex flex-col md:flex-row gap-8">
@@ -40,8 +62,9 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="flex-1 bg-gray-100/20 backdrop-blur-md rounded-xl p-8 flex flex-col gap-4 text-white"
         >
-          <h2 className="text-xl font-semibold text-yellow-400">{t.footer.contactTitle}</h2>
-        
+          <h2 className="text-xl font-semibold text-yellow-400">
+            {t.footer.contactTitle}
+          </h2>
           <p>{t.footer.email}</p>
         </motion.div>
 
@@ -83,14 +106,24 @@ export default function ContactPage() {
 
           <button
             type="submit"
-            className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black font-semibold py-3 rounded-lg hover:from-yellow-300 hover:to-yellow-500 transition"
+            disabled={loading}
+            className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600
+              text-black font-semibold py-3 rounded-lg
+              hover:from-yellow-300 hover:to-yellow-500 transition disabled:opacity-50"
           >
-            {locale === 'ar' ? 'إرسال' : locale === 'fr' ? 'Envoyer' : 'Send'}
+            {loading
+              ? locale === 'ar' ? 'جارٍ الإرسال...' : locale === 'fr' ? 'Envoi...' : 'Sending...'
+              : locale === 'ar' ? 'إرسال' : locale === 'fr' ? 'Envoyer' : 'Send'}
           </button>
 
           {submitted && (
             <p className="text-green-400 mt-2 text-center">
               {locale === 'ar' ? 'تم الإرسال بنجاح!' : locale === 'fr' ? 'Envoyé avec succès!' : 'Message sent successfully!'}
+            </p>
+          )}
+          {error && (
+            <p className="text-red-400 mt-2 text-center">
+              {locale === 'ar' ? 'حدث خطأ، حاول مرة أخرى.' : locale === 'fr' ? "Une erreur s'est produite." : 'An error occurred, please try again.'}
             </p>
           )}
         </motion.form>
