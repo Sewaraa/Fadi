@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { messages } from '@/lib/i18n'
 import { useParams } from 'next/navigation'
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaTelegram } from 'react-icons/fa'
 
 export default function Footer() {
   const params = useParams()
@@ -20,12 +20,7 @@ export default function Footer() {
           <p className="text-gray-300 max-w-sm">
             {t.footer.description || 'Your go-to solution for modern web projects and creative services.'}
           </p>
-          <div className="flex gap-4 mt-4">
-            <a href="#" className="hover:text-yellow-400 transition"><FaFacebookF /></a>
-            <a href="#" className="hover:text-yellow-400 transition"><FaTwitter /></a>
-            <a href="#" className="hover:text-yellow-400 transition"><FaLinkedinIn /></a>
-            <a href="#" className="hover:text-yellow-400 transition"><FaInstagram /></a>
-          </div>
+         
         </div>
 
         {/* Quick Links */}
@@ -40,9 +35,13 @@ export default function Footer() {
         {/* Contact Info */}
         <div className="flex flex-col gap-2">
           <h3 className="text-xl font-semibold text-yellow-400 mb-2">{t.footer.contactTitle || 'Contact'}</h3>
-          <p className="text-gray-300">{t.footer.address || '123 Main Street, City, Country'}</p>
-          <p className="text-gray-300">{t.footer.phone || '+1 234 567 890'}</p>
-          <p className="text-gray-300">{t.footer.email || 'info@smartline.com'}</p>
+          <Link href={`mailto:${t.footer.email || 'Smartline@smartline-sy.com'}`} className="text-gray-300">{t.footer.email || 'Smartline@smartline-sy.com'}</Link>
+           <div className="flex gap-4 mt-4">
+            <a href="https://www.facebook.com/share/17tdVbooPi/" className="hover:text-yellow-400 transition"><FaFacebookF /></a>
+            <a href="https://www.instagram.com" className="hover:text-yellow-400 transition"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/fadi-shalhoub-93a0803a3" className="hover:text-yellow-400 transition"><FaLinkedinIn /></a>
+            <a href="https://t.me/smartline332" className="hover:text-yellow-400 transition"><FaTelegram/></a>
+          </div>
         </div>
 
       </div>

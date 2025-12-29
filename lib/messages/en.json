@@ -2,16 +2,15 @@
   "nav": {
     "language": "EN",
     "home": "Home",
-    "services": "Services",
-    "projects": "Projects",
+    "services": "Solutions",
+    "projects": "Case Studies",
     "about": "About Us",
-    "contact": "Get in touch"
+    "contact": "Contact"
   },
   "hero": {
     "title": "We deliver smart ideas for real digital success",
     "coremessage": "We help you grow your business through innovative, practical, and scalable digital solutions tailored to your needs",
-    "buttontextn1": "Discover our services",
-    "buttontextn2": "Schedule a Consultation"
+    "buttontext":"Launch Your Project Today"
   },
   "features": {
     "title": "Why Choose Us?",
@@ -23,7 +22,7 @@
     ]
   },
   "Services": {
-    "title": "Our Services",
+    "title": "Our Solutions",
     "ourmessage": "We provide a comprehensive range of software solutions carefully designed to help your business grow and achieve digital transformation efficiently.",
     "items": [
       {
@@ -57,7 +56,7 @@
     ]
   },
   "howWeWork": {
-    "title": "How We Work?",
+    "title": "Our Workflow",
     "subtitle": "A clear and structured process from idea to delivery",
     "steps": [
       {
@@ -88,13 +87,29 @@
   ],
   "footer": "Timeline and support vary depending on project scope and service package."
 },
+
+  "about": {
+    "title": "About Us",
+    "subtitle": "We craft smart digital solutions for real business success.",
+    "foundedTitle": "Founded",
+    "foundedDesc": "Our company was founded in 2024 to provide professional software solutions that match the evolving digital market.",
+    "missionTitle": "Our Mission",
+    "missionDesc": "We believe technology is a key partner in the success and growth of businesses.",
+    "expertiseTitle": "Our Expertise",
+    "expertiseDesc": "We specialize in web development, admin systems, e-commerce solutions, and business automation.",
+    "visionTitle": "Our Vision",
+    "visionDesc": "To be a trusted tech partner contributing to sustainable digital businesses.",
+    "valuesTitle": "Our Values",
+    "valuesDesc": "Transparency, Quality, Innovation, Commitment, Client Support.",
+    "supportTitle": "Client Support",
+    "supportDesc": "Providing ongoing technical support and maintenance after project delivery.",
+    "footer": "Empowering businesses with smart software solutions."
+  },
   "footer": {
     "description": "Your go-to solution for modern web projects and creative services.",
     "linksTitle": "Quick Links",
     "contactTitle": "Contact",
-    "address": "123 Main Street, City, Country",
-    "phone": "+1 234 567 890",
-    "email": "info@smartline.com",
+    "email": "Smartline@smartline-sy.com",
     "rights": "All rights reserved."
   }
 }

@@ -27,7 +27,7 @@ export default function ContactPage() {
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 py-16
       bg-gradient-to-b from-black/90 via-yellow-900/10 to-black/80
     ">
-      <div className="max-w-3xl w-full text-center mb-12">
+      <div className="max-w-3xl w-full text-center mb-12 pt-32">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{t.nav.contact}</h1>
         <p className="text-gray-300 text-lg">{t.footer.description}</p>
       </div>
@@ -41,8 +41,7 @@ export default function ContactPage() {
           className="flex-1 bg-gray-100/20 backdrop-blur-md rounded-xl p-8 flex flex-col gap-4 text-white"
         >
           <h2 className="text-xl font-semibold text-yellow-400">{t.footer.contactTitle}</h2>
-          <p>{t.footer.address}</p>
-          <p>{t.footer.phone}</p>
+        
           <p>{t.footer.email}</p>
         </motion.div>
 

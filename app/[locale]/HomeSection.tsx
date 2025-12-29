@@ -36,7 +36,7 @@ export const HomeSection: React.FC = () => {
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-20 w-full flex flex-col items-center pt-28 pb-16 px-4 text-center">
+      <div className="relative z-20 w-full flex flex-col items-center pt-40 pb-16 px-4 text-center">
         <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-semibold leading-tight tracking-tight drop-shadow-lg mb-4">
           {t.hero.title}
         </h1>
@@ -46,16 +46,13 @@ export const HomeSection: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link href={`/${locale}/#services`}>
+          <Link href={`/${locale}/contact`}>
           <button className="px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-lg text-base sm:text-lg font-semibold  border border-yellow-500 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 transition-all shadow-lg transform hover:-translate-y-0.5">
-            {t.hero.buttontextn1}
+            {t.hero.buttontext}
           </button>
           </Link>
-         <Link href={`/${locale}/contact`}>
-          <button className="px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-lg text-base sm:text-lg font-semibold border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black transition-all shadow">
-            {t.hero.buttontextn2}
-          </button>
-         </Link>
+      
+        
 
          
         </div>

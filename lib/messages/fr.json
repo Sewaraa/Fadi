@@ -2,16 +2,15 @@
   "nav": {
     "language": "FR",
     "home": "Accueil",
-    "services": "Services",
-    "projects": "Projets",
+    "services": "Solutions",
+    "projects": "Études de cas",
     "about": "À propos de nous",
-    "contact": "Contactez-nous"
+    "contact": "Contact"
   },
   "hero": {
     "title": "Nous livrons des idées intelligentes pour un véritable succès numérique",
     "coremessage": "Nous vous aidons à développer votre entreprise grâce à des solutions numériques innovantes, pratiques et évolutives adaptées à vos besoins",
-    "buttontextn1": "Découvrez nos services",
-    "buttontextn2":"Planifier une consultation"
+    "buttontext":"Lancez votre projet aujourd'hui"
   },
   "features": {
     "title":"Pourquoi nous choisir?",
@@ -23,7 +22,7 @@
     ]
   },
   "Services": {
-  "title": "Nos Services",
+  "title": "Nos Solutions",
   "ourmessage": "Nous proposons une gamme complète de solutions logicielles soigneusement conçues pour aider votre entreprise à se développer et réussir sa transformation numérique.",
 
   "items": [
@@ -58,7 +57,7 @@
   ]
 },
 "howWeWork": {
-  "title": "Notre Méthode de Travail?",
+  "title": "Notre flux de travail",
   "subtitle": "Un processus clair et structuré, de l’idée à la livraison",
   "steps": [
     {
@@ -90,13 +89,30 @@
   "footer":
     "Le délai et le support dépendent de la portée du projet et du service sélectionné."
 },
+
+ 
+  "about": {
+    "title": "À propos de nous",
+    "subtitle": "Nous concevons des solutions digitales intelligentes pour le succès réel des entreprises.",
+    "foundedTitle": "Fondation",
+    "foundedDesc": "Notre société a été fondée en 2024 pour fournir des solutions logicielles professionnelles adaptées au marché numérique en évolution.",
+    "missionTitle": "Notre mission",
+    "missionDesc": "Nous croyons que la technologie est un partenaire clé dans le succès et la croissance des entreprises.",
+    "expertiseTitle": "Notre expertise",
+    "expertiseDesc": "Nous sommes spécialisés dans le développement web, les systèmes administratifs, les solutions e-commerce et l'automatisation des entreprises.",
+    "visionTitle": "Notre vision",
+    "visionDesc": "Être un partenaire technologique de confiance contribuant à des entreprises numériques durables.",
+    "valuesTitle": "Nos valeurs",
+    "valuesDesc": "Transparence, Qualité, Innovation, Engagement, Support client.",
+    "supportTitle": "Support client",
+    "supportDesc": "Fournir un support technique continu et une maintenance après la livraison du projet.",
+    "footer": "Renforcer les entreprises avec des solutions logicielles intelligentes."
+  },
 "footer": {
     "description": "Votre solution idéale pour des projets web modernes et des services créatifs.",
     "linksTitle": "Liens rapides",
     "contactTitle": "Contact",
-    "address": "123 rue Principale, Ville, Pays",
-    "phone": "+1 234 567 890",
-    "email": "info@smartline.com",
+    "email": "Smartline@smartline-sy.com",
     "rights": "Tous droits réservés."
   }
 }
