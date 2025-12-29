@@ -70,7 +70,7 @@ export default function HowWeWorkCreative() {
                     rotate: [0, 360],
                   }}
                   transition={{
-                    duration:1,
+                    duration:6,
                     repeat: Infinity,
                     repeatType: "loop",
                     ease: "easeInOut",
