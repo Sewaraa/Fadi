@@ -3,6 +3,7 @@
 import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { messages } from '@/lib/i18n'
+import Sparkles from './Sparkle'
 
 export default function HowWeWorkCreative() {
   const params = useParams()
@@ -36,8 +37,14 @@ export default function HowWeWorkCreative() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={
-                  `relative p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10
-                  hover:bg-white/10 transition
+                  `          relative z-10
+          max-w-5xl mx-auto
+          rounded-[2.5rem]
+          bg-black/50 backdrop-blur-xl
+          border border-yellow-500/30
+          px-10 py-10 md:px-12
+          text-center
+          shadow-[0_0_80px_rgba(212,175,55,0.15)]
                   ${isRTL ? 'text-right' : 'text-left'}`
                 }
               >
@@ -55,37 +62,21 @@ export default function HowWeWorkCreative() {
                 <p className="mt-2 text-gray-400 leading-relaxed">
                   {step.description}
                 </p>
-
-                {/* Optional decorative shape */}
-
-                <motion.div
-                  className="absolute w-8 h-8 rounded-full bg-yellow-400/20"
-                  style={{
-                    top: 0,
-                    left: 0,
-                  }}
-                  animate={{
-                    x: ["0%", "400%", "0%", "400%"], 
-                    y: ["0%", "400%", "280%", "0%"], 
-                    rotate: [0, 360],
-                  }}
-                  transition={{
-                    duration:6,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    ease: "easeInOut",
-                  }}
-                />
+<Sparkles/>
+               
               </motion.div>
             )
           })}
+           
         </div>
 
         {/* Footer */}
         <p className="mt-20 text-center text-sm text-gray-500">
           {t.howWeWork.footer}
         </p>
+        
       </div>
+     
     </section>
   )
 }
