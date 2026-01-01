@@ -17,9 +17,7 @@ export default function Navbar() {
   const locale = (params?.locale ?? "en") as "en" | "ar" | "fr"
   const t = messages[locale] ?? messages.en
 
-  /* ---------------------------
-     🔒 FORCE SAVED LANGUAGE
-  --------------------------- */
+
   useEffect(() => {
     const savedLocale = localStorage.getItem("preferredLocale") as
       | "en"
@@ -41,33 +39,30 @@ export default function Navbar() {
     { name: t.nav.about, href: "/about" },
   ]
 
-  /* ---------------------------
-     🌍 LOCALIZE LINKS
-  --------------------------- */
   const localize = (href: string) => {
     if (href.startsWith("#")) return `/${locale}${href}`
     if (href === "/") return `/${locale}`
     return `/${locale}${href}`
   }
 
-  /* ---------------------------
-     🔄 SWITCH LANGUAGE
-  --------------------------- */
-  const switchLang = (l: "en" | "ar" | "fr") => {
-    localStorage.setItem("preferredLocale", l)
-
-    const segments = pathname.split("/")
+ const switchLang = (l: "en" | "ar" | "fr") => {
+  document.cookie = `locale=${l}; path=/; max-age=31536000`
+  const segments = pathname.split("/")
+  if (segments[1] && locale.includes(segments[1])) {
     segments[1] = l
-    router.push(segments.join("/"))
+  } else {
+    segments.unshift("", l)
   }
+
+  router.replace(segments.join("/"))
+}
 
   return (
     <>
-      {/* DESKTOP BAR */}
       <header className="fixed top-2 left-1/2 z-50 w-[95%] max-w-6xl -translate-x-1/2 h-16 rounded-2xl bg-black/80 backdrop-blur-lg border border-white/10">
         <div className="flex items-center justify-between px-6 h-full">
 
-          {/* LOGO */}
+         
           <Link href={`/${locale}`} className="flex items-center">
             <Image
               src="/smartline2-2.png"
@@ -78,7 +73,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* NAV LINKS */}
           <nav className="hidden md:flex items-center gap-8 px-6 py-2 text-lg text-white bg-white/5 rounded-full">
             {navLinks.map((l) => (
               <Link
@@ -93,10 +87,8 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* RIGHT */}
           <div className="flex items-center gap-4">
 
-            {/* LANG */}
             <div className="hidden md:flex gap-2 text-xs">
               {["en", "ar", "fr"].map((l) => (
                 <button
@@ -112,8 +104,6 @@ export default function Navbar() {
                 </button>
               ))}
             </div>
-
-            {/* CTA */}
             <Link
               href={localize("/contact")}
               className="hidden md:block rounded-full border border-white/30
@@ -121,15 +111,12 @@ export default function Navbar() {
             >
               {t.nav.contact}
             </Link>
-            {/* MOBILE BTN */}
             <button onClick={() => setOpen(true)} className="text-2xl text-white md:hidden">
               <HiMenu />
             </button>
           </div>
         </div>
       </header>
-
-      {/* MOBILE MENU */}
       <div
         className={`fixed inset-0 z-50 bg-black/90 backdrop-blur-lg
           transform transition-transform duration-300
@@ -161,8 +148,6 @@ export default function Navbar() {
           >
             {t.nav.contact}
           </Link>
-
-          {/* LANG MOBILE */}
           <div className="mt-10 flex gap-4 text-sm">
             {["en", "ar", "fr"].map((l) => (
               <button
