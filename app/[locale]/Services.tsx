@@ -2,7 +2,9 @@
 
 import { useParams } from 'next/navigation'
 import { messages } from '@/lib/i18n'
-import { motion, Variants } from 'framer-motion'
+import { motion as _motion } from 'framer-motion'
+const motion: any = _motion
+type Variants = any
 import { Code, LayoutDashboard, ShoppingCart, Settings } from 'lucide-react'
 import type { ReactElement } from 'react'
 

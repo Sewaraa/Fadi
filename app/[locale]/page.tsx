@@ -5,6 +5,7 @@ import FeaturesTyping from './Features'
 import ContactCTA from './Getintouch'
 import SectionDividerDots from './Dots'
 import HowWeWork from './Howwework'
+import CaseStudiesSection from './CaseStudies'
 
 
 
@@ -12,11 +13,11 @@ import HowWeWork from './Howwework'
 export default function LocaleHome() {
   return (  <>
     <HomeSection />
-   
-    <SectionDividerDots/>
+   <SectionDividerDots/>
    <FeaturesTyping/>
    <HowWeWork/>
    <Services/>
+   <CaseStudiesSection/>
    <ContactCTA/>
 
   </>)}

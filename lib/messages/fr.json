@@ -108,6 +108,47 @@
     "supportDesc": "Fournir un support technique continu et une maintenance après la livraison du projet.",
     "footer": "Renforcer les entreprises avec des solutions logicielles intelligentes."
   },
+"caseStudies": {
+  "title": "Études de cas",
+  "subtitle": "Une sélection de nos projets numériques récents",
+  "items": [
+    {
+      "name": "Système de gestion d’entreprise intelligent",
+      "date": "2024",
+      "description": "Un système numérique moderne conçu pour optimiser les opérations internes avec une interface fluide et performante.",
+   
+      "liveDemo": "https://ssm.smartphone-sy.com"
+    },
+    {
+      "name": "Plateforme e-commerce",
+      "date": "2023",
+      "description": "Une plateforme e-commerce évolutive axée sur la rapidité, la simplicité et une expérience d’achat fluide.",
+    
+      "liveDemo": "https://smartphone-sy.com"
+    },
+    {
+      "name": "Site web d'entreprise professionnel",
+      "date": "2024",
+      "description": "Un site web professionnel et moderne renforçant la présence de la marque grâce à un design élégant et performant.",
+      "liveDemo": "https://smartex-sy.com"
+    },{
+    "name":"Crypto Pulse",
+    "date":"2023",
+    "description":"Une application de suivi des cryptomonnaies qui affiche les prix en temps réel et les mises à jour en direct pour différentes monnaies. Construit avec une interface moderne et alimenté par l’API CoinGecko.",
+    "liveDemo":"https://mycryptopuls.onrender.com"
+  }
+  ]
+}
+  ,
+  "contact": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer",
+      "sending": "Envoi...",
+      "success": "Envoyé avec succès!",
+      "error": "Une erreur s'est produite."
+    },
 "footer": {
     "description": "Votre solution idéale pour des projets web modernes et des services créatifs.",
     "linksTitle": "Liens rapides",

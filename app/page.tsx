@@ -6,6 +6,7 @@ import FeaturesTyping from'./[locale]/Features'
 import ContactCTA from './[locale]/Getintouch'
 import SectionDividerDots from './[locale]/Dots'
 import HowWeWork from './[locale]/Howwework'
+import CaseStudiesSection from './[locale]/CaseStudies'
 
 export default function LocaleHome() {
   return (  <>
@@ -15,6 +16,7 @@ export default function LocaleHome() {
     <FeaturesTyping/>
     <HowWeWork/>
     <Services/>
+    <CaseStudiesSection/>
     <ContactCTA/>
     
   </>)

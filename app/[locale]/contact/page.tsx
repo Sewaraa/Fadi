@@ -2,47 +2,63 @@
 
 import { useParams } from 'next/navigation'
 import { messages } from '@/lib/i18n'
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion as _motion } from 'framer-motion'
+const motion: any = _motion
 import emailjs from '@emailjs/browser'
 
 export default function ContactPage() {
-  const params = useParams()
-  const locale = (params?.locale ?? 'en') as 'en' | 'ar' | 'fr'
+  const { locale = 'en' } = useParams<{ locale: 'en' | 'ar' | 'fr' }>()
   const t = messages[locale] ?? messages.en
 
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState(false)
-  const [loading, setLoading] = useState(false)
+  useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!)
+  }, [])
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+
+  const [state, setState] = useState<'idle' | 'loading' | 'success' | 'error'>(
+    'idle'
+  )
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setLoading(true)
-    setError(false)
+    setState('loading')
 
-    emailjs.send(
-      'service_agq52t3',       // من حساب EmailJS
-      'template_258uvg5',      // من حساب EmailJS
-      formData,
-      'WYd3K3XFbb7g9Zdbk'        // من حساب EmailJS
-    ).then(() => {
-      setSubmitted(true)
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: process.env.NEXT_PUBLIC_HOSTINGER_EMAIL,
+          reply_to: formData.email,
+          message: formData.message,
+        }
+      )
+
       setFormData({ name: '', email: '', message: '' })
-      setLoading(false)
-    }).catch((err) => {
+      setState('success')
+    } catch (err) {
       console.error(err)
-      setError(true)
-      setLoading(false)
-    })
+      setState('error')
+    }
   }
 
+  const c = t.contact 
+
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 py-16
+  <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 py-8
       bg-gradient-to-b from-black/90 via-yellow-900/10 to-black/80
     ">
       <div className="max-w-3xl w-full text-center mb-12 pt-32">
@@ -67,7 +83,6 @@ export default function ContactPage() {
           </h2>
           <p>{t.footer.email}</p>
         </motion.div>
-
         {/* Contact Form */}
         <motion.form
           initial={{ opacity: 0, x: 20 }}
@@ -106,24 +121,18 @@ export default function ContactPage() {
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={state==='loading'}
             className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600
               text-black font-semibold py-3 rounded-lg
               hover:from-yellow-300 hover:to-yellow-500 transition disabled:opacity-50"
           >
-            {loading
-              ? locale === 'ar' ? 'جارٍ الإرسال...' : locale === 'fr' ? 'Envoi...' : 'Sending...'
-              : locale === 'ar' ? 'إرسال' : locale === 'fr' ? 'Envoyer' : 'Send'}
+            {state==='loading'? c.sending : c.send}
           </button>
-
-          {submitted && (
-            <p className="text-green-400 mt-2 text-center">
-              {locale === 'ar' ? 'تم الإرسال بنجاح!' : locale === 'fr' ? 'Envoyé avec succès!' : 'Message sent successfully!'}
-            </p>
+            {state === 'success' && (
+            <p className="text-green-400 mt-2 text-center">{c.success}</p>
           )}
-          {error && (
-            <p className="text-red-400 mt-2 text-center">
-              {locale === 'ar' ? 'حدث خطأ، حاول مرة أخرى.' : locale === 'fr' ? "Une erreur s'est produite." : 'An error occurred, please try again.'}
+          {state === 'error' && ( <p className="text-red-400 mt-2 text-center">
+             {c.error}
             </p>
           )}
         </motion.form>

@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion as _motion } from 'framer-motion'
+const motion: any = _motion
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { messages } from '@/lib/i18n'

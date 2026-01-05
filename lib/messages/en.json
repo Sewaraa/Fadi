@@ -105,6 +105,46 @@
     "supportDesc": "Providing ongoing technical support and maintenance after project delivery.",
     "footer": "Empowering businesses with smart software solutions."
   },
+ "caseStudies": {
+  "title": "Case Studies",
+  "subtitle": "A selection of our latest digital work",
+  "items": [
+    {
+      "name": "Smart Business Management System",
+      "date": "2024",
+      "description": "A modern digital system designed to streamline internal operations with a smooth interface and high performance.",
+      "liveDemo": "https://ssm.smartphone-sy.com"
+    },
+    {
+      "name": "E-commerce Platform",
+      "date": "2023",
+      "description": "A scalable e-commerce platform focused on speed, usability, and seamless shopping experiences across devices.",
+      "liveDemo": "https://smartphone-sy.com"
+    },
+    {
+      "name": "Corporate Website",
+      "date": "2024",
+      "description": "A clean and professional corporate website that strengthens brand presence through elegant design and solid performance.",
+      "liveDemo": "https://smartex-sy.com"
+    },
+    {
+      "name":"Crypto Pulse",
+      "date":"2023",
+      "description": "A cryptocurrency tracking app that displays real-time prices and live updates for various coins. Built with a modern UI and powered by the CoinGecko API.",
+      "liveDemo":"https://mycryptopuls.onrender.com"
+    }
+  ],
+  "button":"View All Projects"
+},
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "An error occurred, please try again."
+  },
   "footer": {
     "description": "Your go-to solution for modern web projects and creative services.",
     "linksTitle": "Quick Links",

@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion as _motion, AnimatePresence } from "framer-motion"
+const motion: any = _motion
 
 export default function TouchTrail() {
   const [touchPos, setTouchPos] = useState<{ x: number; y: number } | null>(null)

@@ -1,7 +1,8 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import { motion } from 'framer-motion'
+import { motion as _motion } from 'framer-motion'
+const motion: any = _motion
 import { messages } from '@/lib/i18n'
 import Sparkles from './Sparkle'
 
