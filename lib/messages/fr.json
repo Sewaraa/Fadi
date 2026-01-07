@@ -1,4 +1,8 @@
-{
+{ "seo": {
+     "title": "SmartLine | Société de logiciels numériques",
+      "description":
+        "SmartLine est une entreprise spécialisée dans les solutions logicielles intelligentes."
+    },
   "nav": {
     "language": "FR",
     "home": "Accueil",
@@ -116,24 +120,28 @@
       "name": "Système de gestion d’entreprise intelligent",
       "date": "2024",
       "description": "Un système numérique moderne conçu pour optimiser les opérations internes avec une interface fluide et performante.",
-   
+      "logo":"/smartline2-2.png",
       "liveDemo": "https://ssm.smartphone-sy.com"
     },
-    {
-      "name": "Plateforme e-commerce",
-      "date": "2023",
-      "description": "Une plateforme e-commerce évolutive axée sur la rapidité, la simplicité et une expérience d’achat fluide.",
-    
-      "liveDemo": "https://smartphone-sy.com"
-    },
+  
     {
       "name": "Site web d'entreprise professionnel",
       "date": "2024",
       "description": "Un site web professionnel et moderne renforçant la présence de la marque grâce à un design élégant et performant.",
+     "logo":"/smartline2-2.png",
       "liveDemo": "https://smartex-sy.com"
-    },{
+    },
+      {
+      "name": "Plateforme e-commerce",
+      "date": "2023",
+      "description": "Une plateforme e-commerce évolutive axée sur la rapidité, la simplicité et une expérience d’achat fluide.",
+      "logo":"/smartline2-2.png",
+      "liveDemo": "https://smartphone-sy.com"
+    },
+    {
     "name":"Crypto Pulse",
     "date":"2023",
+    "logo":"/smartline2-2.png",
     "description":"Une application de suivi des cryptomonnaies qui affiche les prix en temps réel et les mises à jour en direct pour différentes monnaies. Construit avec une interface moderne et alimenté par l’API CoinGecko.",
     "liveDemo":"https://mycryptopuls.onrender.com"
   }

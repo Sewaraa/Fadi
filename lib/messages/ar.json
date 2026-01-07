@@ -1,4 +1,8 @@
-{
+{"seo": {
+     "title": "سمارت لاين | شركة برمجيات رقمية",
+      "description":
+        "سمارت لاين شركة متخصصة في الحلول البرمجية الذكية وتطوير الأنظمة الرقمية."
+    },
   "nav": {
     "language":"AR",
     "home": "الرئيسية",
@@ -111,27 +115,31 @@
       "name": "نظام إدارة أعمال ذكي",
       "date": "2024",
       "description": "نظام رقمي حديث لإدارة العمليات الداخلية وتحسين سير العمل من خلال واجهة استخدام سلسة وتجربة عالية الأداء.",
-      "liveDemo": "https://ssm.smartphone-sy.com"
+      "liveDemo": "https://ssm.smartphone-sy.com",
+      "logo":"/smartline2-2.png"
     },
-    {
-      "name": "منصة تجارة إلكترونية",
-      "date": "2023",
-      "description": "منصة تجارة إلكترونية مصممة للنمو، تركز على السرعة، سهولة الاستخدام، وتجربة شراء مريحة عبر جميع الأجهزة.",
-    
-      "liveDemo": "https://smartphone-sy.com"
-    },
+   
     {
       "name": "موقع شركة احترافي",
       "date": "2024",
       "description": "موقع شركة عصري يعكس هوية العلامة التجارية ويعزز الحضور الرقمي من خلال تصميم أنيق وأداء قوي.",
    
-      "liveDemo": "https://smartex-sy.com"
+      "liveDemo": "https://smartex-sy.com",
+      "logo":"/smartline2-2.png"
+    },
+     {
+      "name": "منصة تجارة إلكترونية",
+      "date": "2023",
+      "description": "منصة تجارة إلكترونية مصممة للنمو، تركز على السرعة، سهولة الاستخدام، وتجربة شراء مريحة عبر جميع الأجهزة.",
+    "logo":"/smartline2-2.png",
+      "liveDemo": "https://smartphone-sy.com"
     },
     {
       "name":"Crypto Pulse",
       "date":"2023",
       "description":"تطبيق لتتبع العملات الرقمية يعرض الأسعار لحظيًا والتحديثات المباشرة لمختلف العملات. تم تصميمه بواجهة حديثة ويعمل باستخدام واجهة برمجة التطبيقات CoinGecko",
-      "liveDemo":"https://mycryptopuls.onrender.com"
+      "liveDemo":"https://mycryptopuls.onrender.com",
+      "logo":"/smartline2-2.png"
     }
   ]
 },

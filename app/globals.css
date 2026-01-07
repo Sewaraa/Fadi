@@ -114,3 +114,32 @@ h1,h2,h3{
   animation: float 6s ease-in-out infinite;
 }
 
+
+
+.logo_bubble_gray {
+  position: relative;
+  top:5px;
+  width: 120px;
+  height: 40px;
+  
+  text-transform: uppercase;
+  background: black;
+  border: 1px solid rgba(119, 114, 98, 0.363); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+/* تحديد جهة البالون */
+.logo_bubble_gray_left {
+  left: 15px;
+  border-radius: 0px 15px  0px 15px;
+}
+
+.logo_bubble_gray_right {
+  right: 15px;
+  border-radius: 15px 0  15px 0;
+}

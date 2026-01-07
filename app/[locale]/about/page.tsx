@@ -6,7 +6,6 @@ const motion: any = _motion
 import { messages } from '@/lib/i18n'
 import { HiOfficeBuilding, HiLightBulb, HiCode,  HiStar, HiHand } from 'react-icons/hi'
 import { FiTarget } from 'react-icons/fi'
-
 export default function AboutPage() {
   const params = useParams()
   const locale = (params?.locale ?? 'en') as 'en' | 'ar' | 'fr'
@@ -46,7 +45,8 @@ export default function AboutPage() {
   ]
 
   return (
-    <section className="relative w-full bg-black text-white px-4 py-28">
+    <>
+     <section className="relative w-full bg-black text-white px-4 py-28">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <motion.div
@@ -97,5 +97,7 @@ export default function AboutPage() {
         </motion.p>
       </div>
     </section>
+    </>
+   
   )
 }

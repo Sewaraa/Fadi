@@ -1,4 +1,10 @@
 {
+
+    "seo": {
+      "title": "SmartLine | Digital Software Company",
+      "description":
+        "SmartLine is a digital company specialized in smart, scalable software solutions."
+    },
   "nav": {
     "language": "EN",
     "home": "Home",
@@ -112,24 +118,29 @@
     {
       "name": "Smart Business Management System",
       "date": "2024",
+      "logo":"/smartline2-2.png",
       "description": "A modern digital system designed to streamline internal operations with a smooth interface and high performance.",
       "liveDemo": "https://ssm.smartphone-sy.com"
     },
+   
     {
+      "name": "Corporate Website",
+      "date": "2024",
+      "logo":"/smartline2-2.png",
+      "description": "A clean and professional corporate website that strengthens brand presence through elegant design and solid performance.",
+      "liveDemo": "https://smartex-sy.com"
+    },
+     {
       "name": "E-commerce Platform",
       "date": "2023",
+      "logo":"/smartline2-2.png",
       "description": "A scalable e-commerce platform focused on speed, usability, and seamless shopping experiences across devices.",
       "liveDemo": "https://smartphone-sy.com"
     },
     {
-      "name": "Corporate Website",
-      "date": "2024",
-      "description": "A clean and professional corporate website that strengthens brand presence through elegant design and solid performance.",
-      "liveDemo": "https://smartex-sy.com"
-    },
-    {
       "name":"Crypto Pulse",
       "date":"2023",
+      "logo":"/smartline2-2.png",
       "description": "A cryptocurrency tracking app that displays real-time prices and live updates for various coins. Built with a modern UI and powered by the CoinGecko API.",
       "liveDemo":"https://mycryptopuls.onrender.com"
     }
