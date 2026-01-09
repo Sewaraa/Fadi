@@ -117,33 +117,37 @@
   "subtitle": "Une sélection de nos projets numériques récents",
   "items": [
     {
-      "name": "Système de gestion d’entreprise intelligent",
-      "date": "2024",
-      "description": "Un système numérique moderne conçu pour optimiser les opérations internes avec une interface fluide et performante.",
+      "name": "Smartphone",
+      "date": "2020",
+      "description": "Une application et un site web rapides et fiables pour les services de paiement électronique, la recharge de jeux et les cartes numériques, offrant simplicité et sécurité élevée.",
       "logo":"/smartline2-2.png",
-      "liveDemo": "https://ssm.smartphone-sy.com"
+      "liveDemo": "https://ssm.smartphone-sy.com",
+       "applogo":"/smartphone.png"
     },
   
     {
-      "name": "Site web d'entreprise professionnel",
-      "date": "2024",
-      "description": "Un site web professionnel et moderne renforçant la présence de la marque grâce à un design élégant et performant.",
+      "name": "SmartExchange",
+      "date": "2025",
+      "description": "Une plateforme spécialisée dans les services d’échange de devises, offrant des solutions rapides et fiables avec un engagement total envers la transparence et la sécurité des transactions.",
      "logo":"/smartline2-2.png",
-      "liveDemo": "https://smartex-sy.com"
+      "liveDemo": "https://smartex-sy.com",
+      "applogo":"/smartexchange.png"
     },
       {
-      "name": "Plateforme e-commerce",
-      "date": "2023",
-      "description": "Une plateforme e-commerce évolutive axée sur la rapidité, la simplicité et une expérience d’achat fluide.",
+      "name": "SSm",
+      "date": "2025",
+      "description": "Un site spécialisé dans les services d’augmentation des abonnés, des mentions « J’aime » et de l’engagement sur les réseaux sociaux tels que Facebook, Instagram, TikTok et YouTube.",
       "logo":"/smartline2-2.png",
-      "liveDemo": "https://smartphone-sy.com"
+      "liveDemo": "https://smartphone-sy.com",
+      "applogo":"/ssm.png"
     },
     {
     "name":"Crypto Pulse",
     "date":"2023",
     "logo":"/smartline2-2.png",
     "description":"Une application de suivi des cryptomonnaies qui affiche les prix en temps réel et les mises à jour en direct pour différentes monnaies. Construit avec une interface moderne et alimenté par l’API CoinGecko.",
-    "liveDemo":"https://mycryptopuls.onrender.com"
+    "liveDemo":"https://mycryptopuls.onrender.com",
+    "applogo":"/bitcoin.png"
   }
   ]
 }

@@ -112,34 +112,37 @@
   "subtitle": "نماذج من أعمالنا الرقمية الحديثة",
   "items": [
     {
-      "name": "نظام إدارة أعمال ذكي",
-      "date": "2024",
-      "description": "نظام رقمي حديث لإدارة العمليات الداخلية وتحسين سير العمل من خلال واجهة استخدام سلسة وتجربة عالية الأداء.",
+      "name": "Smartphone",
+      "date": "2020",
+      "description": ".تطبيق وموقع  موثوق وسريع لخدمات الدفع الإلكتروني وشحن الألعاب والبطاقات الإلكترونية بكل سهولة وأمان",
       "liveDemo": "https://ssm.smartphone-sy.com",
-      "logo":"/smartline2-2.png"
+      "logo":"/smartline2-2.png",
+      "applogo":"/smartphone.png"
     },
    
     {
-      "name": "موقع شركة احترافي",
-      "date": "2024",
-      "description": "موقع شركة عصري يعكس هوية العلامة التجارية ويعزز الحضور الرقمي من خلال تصميم أنيق وأداء قوي.",
-   
+      "name": "SmartExchange",
+      "date": "2025",
+      "description": ".منصة متخصصة في خدمات تبديل العملات، توفر حلولًا موثوقة وسريعة مع التزام كامل بالشفافية والأمان في جميع المعاملات",
       "liveDemo": "https://smartex-sy.com",
-      "logo":"/smartline2-2.png"
+      "logo":"/smartline2-2.png",
+      "applogo":"/smartexchange.png"
     },
      {
-      "name": "منصة تجارة إلكترونية",
-      "date": "2023",
-      "description": "منصة تجارة إلكترونية مصممة للنمو، تركز على السرعة، سهولة الاستخدام، وتجربة شراء مريحة عبر جميع الأجهزة.",
+      "name": "SSm",
+      "date": "2025",
+      "description": ".موقع متخصص في تقديم خدمات زيادة المتابعين والإعجابات والتفاعل على مختلف منصات التواصل الاجتماعي مثل فيسبوك، إنستغرام، تيك توك، ويوتيوب",
     "logo":"/smartline2-2.png",
-      "liveDemo": "https://smartphone-sy.com"
+      "liveDemo": "https://smartphone-sy.com",
+      "applogo":"/ssm.png"
     },
     {
       "name":"Crypto Pulse",
       "date":"2023",
       "description":"تطبيق لتتبع العملات الرقمية يعرض الأسعار لحظيًا والتحديثات المباشرة لمختلف العملات. تم تصميمه بواجهة حديثة ويعمل باستخدام واجهة برمجة التطبيقات CoinGecko",
       "liveDemo":"https://mycryptopuls.onrender.com",
-      "logo":"/smartline2-2.png"
+      "logo":"/smartline2-2.png",
+      "applogo":"/bitcoin.png"
     }
   ]
 },
