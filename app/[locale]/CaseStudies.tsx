@@ -66,7 +66,7 @@ export default function CaseStudiesCreativeGrid() {
                     <Image
                       src={item.applogo}
                       alt={item.name}
-                      width={40}
+                      width={20}
                       height={20}
                       className="opacity-95 py-10"
                     />

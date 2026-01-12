@@ -119,8 +119,8 @@ h1,h2,h3{
 .logo_bubble_gray {
   position: relative;
   top:5px;
-  width: 120px;
-  height: 50px;
+  width: 90px;
+  height: 40px;
   
   text-transform: uppercase;
   background: black;
