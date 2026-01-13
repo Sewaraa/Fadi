@@ -26,17 +26,17 @@ export default function Footer() {
         {/* Quick Links */}
         <div className="flex flex-col gap-3">
           <h3 className="text-xl font-semibold text-yellow-400 mb-2">{t.footer.linksTitle || 'Quick Links'}</h3>
-          <Link href="/#services" className="hover:text-yellow-400 transition">{t.nav.services}</Link>
-          <Link href="/#projects" className="hover:text-yellow-400 transition">{t.nav.projects}</Link>
-          <Link href="/#about" className="hover:text-yellow-400 transition">{t.nav.about}</Link>
-          <Link href="/#contact" className="hover:text-yellow-400 transition">{t.nav.contact}</Link>
+          <Link href="#services" className="hover:text-yellow-400 transition">{t.nav.services}</Link>
+          <Link href="#case-studies" className="hover:text-yellow-400 transition">{t.nav.projects}</Link>
+          <Link href="/about" className="hover:text-yellow-400 transition">{t.nav.about}</Link>
+          <Link href="/contact" className="hover:text-yellow-400 transition">{t.nav.contact}</Link>
         </div>
 
         {/* Contact Info */}
         <div className="flex flex-col gap-2">
           <h3 className="text-xl font-semibold text-yellow-400 mb-2">{t.footer.contactTitle || 'Contact'}</h3>
           <Link href={`mailto:${t.footer.email || 'Smartline@smartline-sy.com'}`} className="text-gray-300">{t.footer.email || 'Smartline@smartline-sy.com'}</Link>
-           <div className="flex gap-4 mt-4">
+           <div className="flex gap-4 mt-4 text-2xl md:text-3xl">
             <a href="https://www.facebook.com/share/17tdVbooPi/" className="hover:text-yellow-400 transition"><FaFacebookF /></a>
             <a href="https://www.instagram.com/Smartline332" className="hover:text-yellow-400 transition"><FaInstagram /></a>
             <a href="https://www.linkedin.com/in/fadi-shalhoub-93a0803a3" className="hover:text-yellow-400 transition"><FaLinkedinIn /></a>

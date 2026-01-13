@@ -107,6 +107,13 @@
     "supportDesc": "تقديم دعم فني وصيانة مستمرة بعد تسليم المشاريع.",
     "footer": "تمكين الأعمال من خلال حلول برمجية ذكية."
   },
+  "getintouch":{
+     "title":"لنصنع شيئًا استثنائيًا",
+     "subtitle":"إذا كان لديك مشروع أو فكرة.",
+     "subtitle2":"الوقت الآن",
+     "buttontext":"ابدأ التواصل "
+  }
+  ,
 "caseStudies": {
   "title": "دراسات الحالة",
   "subtitle": "نماذج من أعمالنا الرقمية الحديثة",
@@ -115,7 +122,7 @@
       "name": "Smartphone",
       "date": "2020",
       "description": "تطبيق وموقع  موثوق وسريع لخدمات الدفع الإلكتروني وشحن الألعاب والبطاقات الإلكترونية بكل سهولة وأمان.",
-      "liveDemo": "https://ssm.smartphone-sy.com",
+      "liveDemo": "https://smartphone-sy.com",
       "logo":"/smartline2-2.png",
       "applogo":"/smartphone.png"
     },
@@ -133,7 +140,8 @@
       "date": "2025",
       "description": "موقع متخصص في تقديم خدمات زيادة المتابعين والإعجابات والتفاعل على مختلف منصات التواصل الاجتماعي مثل فيسبوك، إنستغرام، تيك توك، ويوتيوب.",
     "logo":"/smartline2-2.png",
-      "liveDemo": "https://smartphone-sy.com",
+    "liveDemo": "https://ssm.smartphone-sy.com",
+      
       "applogo":"/ssm.png"
     },
     {

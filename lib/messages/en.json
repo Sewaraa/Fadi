@@ -111,6 +111,12 @@
     "supportDesc": "Providing ongoing technical support and maintenance after project delivery.",
     "footer": "Empowering businesses with smart software solutions."
   },
+  "getintouch":{
+    "title":"Let’s build something exceptional",
+    "subtitle":"If you have a project or an idea",
+    "subtitle2":"the time is now",
+    "buttontext":"Start the conversation"
+  },
  "caseStudies": {
   "title": "Case Studies",
   "subtitle": "A selection of our latest digital work",
@@ -120,7 +126,7 @@
       "date": "2020",
       "logo":"/smartline2-2.png",
       "description": "A fast and reliable application and website for electronic payment services, game top-ups, and digital cards, offering ease of use and high security.",
-      "liveDemo": "https://ssm.smartphone-sy.com",
+       "liveDemo": "https://smartphone-sy.com",
        "applogo":"/smartphone.png"
     },
    
@@ -137,7 +143,8 @@
       "date": "2025",
       "logo":"/smartline2-2.png",
       "description": "A specialized website offering services to increase followers, likes, and engagement across social media platforms such as Facebook, Instagram, TikTok, and YouTube.",
-      "liveDemo": "https://smartphone-sy.com",
+     
+      "liveDemo": "https://ssm.smartphone-sy.com",
       "applogo":"/ssm.png"
     },
     {

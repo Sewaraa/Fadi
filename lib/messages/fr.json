@@ -111,6 +111,13 @@
     "supportTitle": "Support client",
     "supportDesc": "Fournir un support technique continu et une maintenance après la livraison du projet.",
     "footer": "Renforcer les entreprises avec des solutions logicielles intelligentes."
+  }, 
+
+  "getintouch":{
+    "title":"Laissons-nous construire quelque chose d'exceptionnel",
+    "subtitle":"Si vous avez un projet ou une idée",
+    "subtitle2":"le moment est venu",
+    "buttontext":"Entrer en contact"
   },
 "caseStudies": {
   "title": "Études de cas",
@@ -121,7 +128,8 @@
       "date": "2020",
       "description": "Une application et un site web rapides et fiables pour les services de paiement électronique, la recharge de jeux et les cartes numériques, offrant simplicité et sécurité élevée.",
       "logo":"/smartline2-2.png",
-      "liveDemo": "https://ssm.smartphone-sy.com",
+    
+       "liveDemo": "https://smartphone-sy.com",
        "applogo":"/smartphone.png"
     },
   
@@ -138,7 +146,7 @@
       "date": "2025",
       "description": "Un site spécialisé dans les services d’augmentation des abonnés, des mentions « J’aime » et de l’engagement sur les réseaux sociaux tels que Facebook, Instagram, TikTok et YouTube.",
       "logo":"/smartline2-2.png",
-      "liveDemo": "https://smartphone-sy.com",
+  "liveDemo": "https://ssm.smartphone-sy.com",
       "applogo":"/ssm.png"
     },
     {

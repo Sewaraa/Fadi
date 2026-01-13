@@ -12,26 +12,10 @@ export default function ContactCTA() {
   const locale = (params?.locale ?? 'en') as 'en' | 'ar' | 'fr'
   const t = messages[locale] ?? messages.en
 
-  const title =
-    locale === 'ar'
-      ? 'لنصنع شيئًا استثنائيًا'
-      : locale === 'fr'
-      ? 'Créons quelque chose d’exceptionnel'
-      : 'Let’s build something exceptional'
-
-  const subtitle =
-    locale === 'ar'
-      ? 'إذا كان لديك مشروع أو فكرة — الوقت الآن.'
-      : locale === 'fr'
-      ? 'Si vous avez un projet ou une idée — le moment est venu.'
-      : 'If you have a project or an idea — now is the time.'
-
-  const button =
-    locale === 'ar'
-      ? 'ابدأ التواصل'
-      : locale === 'fr'
-      ? 'Entrer en contact'
-      : 'Start the conversation'
+  const title = t.getintouch.title
+  const subtitle = t.getintouch.subtitle
+  const subtitle2 = t.getintouch.subtitle2
+  const button = t.getintouch.buttontext
 
   return (
     <motion.section 
@@ -82,9 +66,12 @@ export default function ContactCTA() {
           {title}
         </h2>
 
-        <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-12">
+        <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-6">
           {subtitle}
         </p>
+        <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+         {subtitle2}
+          </p>
 
         {/* Button */}
         <Link href={`/${locale}/contact`}>
