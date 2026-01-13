@@ -82,7 +82,7 @@ export default function CaseStudiesCreativeGrid() {
                 
                  
 
-                  <p className="text-xs uppercase tracking-widest text-gray-500 mb-5">
+                  <p className="text-sm  md:text-lg font-bold uppercase tracking-widest text-yellow-400/50 mb-5">
                     {item.date}
                   </p>
 
