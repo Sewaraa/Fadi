@@ -1,46 +1,43 @@
-'use client'
+"use client";
 
-import { motion as _motion } from 'framer-motion'
-const motion: any = _motion
-import Link from 'next/link'
-import { useParams } from 'next/navigation'
-import { messages } from '@/lib/i18n'
-import { Sparkles } from 'lucide-react'
+import { motion as _motion } from "framer-motion";
+const motion: any = _motion;
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { messages } from "@/lib/i18n";
+import { Sparkles } from "lucide-react";
 
 export default function ContactCTA() {
-  const params = useParams()
-  const locale = (params?.locale ?? 'en') as 'en' | 'ar' | 'fr'
-  const t = messages[locale] ?? messages.en
+  const params = useParams();
+  const locale = (params?.locale ?? "en") as "en" | "ar" | "fr";
+  const t = messages[locale] ?? messages.en;
 
-  const title = t.getintouch.title
-  const subtitle = t.getintouch.subtitle
-  const subtitle2 = t.getintouch.subtitle2
-  const button = t.getintouch.buttontext
+  const title = t.getintouch.title;
+  const subtitle = t.getintouch.subtitle;
+  const subtitle2 = t.getintouch.subtitle2;
+  const button = t.getintouch.buttontext;
 
   return (
-    <motion.section 
-    initial={{opacity:0,y:-1}}
-    animate={{opacity:1,y:0}}
-    transition={{duration:0.8}}
-    className="relative w-full py-22 px-4 overflow-hidden">
-      
-      {/* Animated gold waves */}
+    <motion.section
+      initial={{ opacity: 0, y: -1 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative w-full py-22 px-4 overflow-hidden"
+    >
       <motion.div
         className="absolute inset-0 opacity-30"
-        animate={{ backgroundPosition: ['0% 50%', '100% 50%'] }}
-        transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+        animate={{ backgroundPosition: ["0% 50%", "100% 50%"] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
         style={{
           backgroundImage:
-            'linear-gradient(120deg, rgba(212,175,55,0.15), rgba(0,0,0,0.8), rgba(212,175,55,0.15))',
-          backgroundSize: '200% 200%',
+            "linear-gradient(120deg, rgba(212,175,55,0.15), rgba(0,0,0,0.8), rgba(212,175,55,0.15))",
+          backgroundSize: "200% 200%",
         }}
       />
-
-      {/* CTA Card */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.9, ease: 'easeOut' }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
         className="
           relative z-10
@@ -53,10 +50,9 @@ export default function ContactCTA() {
           shadow-[0_0_80px_rgba(212,175,55,0.15)]
         "
       >
-        {/* Floating icon */}
         <motion.div
           animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="flex justify-center mb-6"
         >
           <Sparkles className="text-yellow-400" size={40} />
@@ -70,10 +66,8 @@ export default function ContactCTA() {
           {subtitle}
         </p>
         <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-         {subtitle2}
-          </p>
-
-        {/* Button */}
+          {subtitle2}
+        </p>
         <Link href={`/${locale}/contact`}>
           <motion.button
             whileHover={{ scale: 1.06 }}
@@ -89,18 +83,19 @@ export default function ContactCTA() {
               overflow-hidden
             "
           >
-            {/* Button shine */}
-            <span className="
+            <span
+              className="
               absolute inset-0
               bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent)]
               translate-x-[-100%]
               hover:translate-x-[100%]
               transition-transform duration-700
-            " />
+            "
+            />
             <span className="relative z-10">{button}</span>
           </motion.button>
         </Link>
       </motion.div>
     </motion.section>
-  )
+  );
 }

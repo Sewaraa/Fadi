@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import { motion as _motion } from "framer-motion";
 const motion: any = _motion;
 import emailjs from "@emailjs/browser";
-// use anchor for mailto link instead of importing Link from lucide-react
 import {
   FaFacebookF,
   FaInstagram,
@@ -78,7 +77,6 @@ export default function ContactPage() {
       </div>
 
       <div className="w-full max-w-3xl flex flex-col md:flex-row gap-8">
-        {/* Contact Info */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -120,7 +118,6 @@ export default function ContactPage() {
             </div>
           </div>
         </motion.div>
-        {/* Contact Form */}
         <motion.form
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -132,7 +129,7 @@ export default function ContactPage() {
             type="text"
             name="name"
             placeholder={
-              locale === "ar" ? "الاسم" : locale === "fr" ? "Nom" : "Name"
+            c.name
             }
             value={formData.name}
             onChange={handleChange}
@@ -143,11 +140,7 @@ export default function ContactPage() {
             type="email"
             name="email"
             placeholder={
-              locale === "ar"
-                ? "البريد الإلكتروني"
-                : locale === "fr"
-                ? "Email"
-                : "Email"
+             c.email
             }
             value={formData.email}
             onChange={handleChange}
@@ -158,11 +151,7 @@ export default function ContactPage() {
             name="message"
             rows={5}
             placeholder={
-              locale === "ar"
-                ? "الرسالة"
-                : locale === "fr"
-                ? "Message"
-                : "Message"
+              c.message
             }
             value={formData.message}
             onChange={handleChange}

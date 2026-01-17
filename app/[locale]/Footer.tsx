@@ -1,55 +1,93 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { messages } from '@/lib/i18n'
-import { useParams } from 'next/navigation'
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaTelegram } from 'react-icons/fa'
+import Link from "next/link";
+import { messages } from "@/lib/i18n";
+import { useParams } from "next/navigation";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+  FaTelegram,
+} from "react-icons/fa";
 
 export default function Footer() {
-  const params = useParams()
-  const locale = (params?.locale ?? 'en') as 'en' | 'ar' | 'fr'
-  const t = messages[locale] ?? messages.en
+  const params = useParams();
+  const locale = (params?.locale ?? "en") as "en" | "ar" | "fr";
+  const t = messages[locale] ?? messages.en;
 
   return (
     <footer className="relative w-full bg-black/90 text-white border-t border-yellow-500/20">
       <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row justify-between gap-8">
-        
-        {/* Logo + description */}
         <div className="flex flex-col gap-4">
           <h2 className="text-2xl font-bold text-yellow-400">SmartLine</h2>
           <p className="text-gray-300 max-w-sm">
-            {t.footer.description || 'Your go-to solution for modern web projects and creative services.'}
+            {t.footer.description ||
+              "Your go-to solution for modern web projects and creative services."}
           </p>
-         
         </div>
-
-        {/* Quick Links */}
         <div className="flex flex-col gap-3">
-          <h3 className="text-xl font-semibold text-yellow-400 mb-2">{t.footer.linksTitle || 'Quick Links'}</h3>
-          <Link href="#services" className="hover:text-yellow-400 transition">{t.nav.services}</Link>
-          <Link href="#case-studies" className="hover:text-yellow-400 transition">{t.nav.projects}</Link>
-          <Link href="/about" className="hover:text-yellow-400 transition">{t.nav.about}</Link>
-          <Link href="/contact" className="hover:text-yellow-400 transition">{t.nav.contact}</Link>
+          <h3 className="text-xl font-semibold text-yellow-400 mb-2">
+            {t.footer.linksTitle || "Quick Links"}
+          </h3>
+          <Link href="#services" className="hover:text-yellow-400 transition">
+            {t.nav.services}
+          </Link>
+          <Link
+            href="#case-studies"
+            className="hover:text-yellow-400 transition"
+          >
+            {t.nav.projects}
+          </Link>
+          <Link href="/about" className="hover:text-yellow-400 transition">
+            {t.nav.about}
+          </Link>
+          <Link href="/contact" className="hover:text-yellow-400 transition">
+            {t.nav.contact}
+          </Link>
         </div>
-
-        {/* Contact Info */}
         <div className="flex flex-col gap-2">
-          <h3 className="text-xl font-semibold text-yellow-400 mb-2">{t.footer.contactTitle || 'Contact'}</h3>
-          <Link href={`mailto:${t.footer.email || 'Smartline@smartline-sy.com'}`} className="text-gray-300">{t.footer.email || 'Smartline@smartline-sy.com'}</Link>
-           <div className="flex gap-4 mt-4 text-2xl md:text-3xl">
-            <a href="https://www.facebook.com/share/17tdVbooPi/" className="hover:text-yellow-400 transition"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/Smartline332" className="hover:text-yellow-400 transition"><FaInstagram /></a>
-            <a href="https://www.linkedin.com/in/fadi-shalhoub-93a0803a3" className="hover:text-yellow-400 transition"><FaLinkedinIn /></a>
-            <a href="https://t.me/smartline332" className="hover:text-yellow-400 transition"><FaTelegram/></a>
+          <h3 className="text-xl font-semibold text-yellow-400 mb-2">
+            {t.footer.contactTitle || "Contact"}
+          </h3>
+          <Link
+            href={`mailto:${t.footer.email || "Smartline@smartline-sy.com"}`}
+            className="text-gray-300"
+          >
+            {t.footer.email || "Smartline@smartline-sy.com"}
+          </Link>
+          <div className="flex gap-4 mt-4 text-2xl md:text-3xl">
+            <a
+              href="https://www.facebook.com/share/17tdVbooPi/"
+              className="hover:text-yellow-400 transition"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.instagram.com/Smartline332"
+              className="hover:text-yellow-400 transition"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/fadi-shalhoub-93a0803a3"
+              className="hover:text-yellow-400 transition"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="https://t.me/smartline332"
+              className="hover:text-yellow-400 transition"
+            >
+              <FaTelegram />
+            </a>
           </div>
         </div>
-
       </div>
-
-      {/* Bottom Bar */}
       <div className="border-t border-yellow-500/10 text-gray-400 text-sm text-center py-4">
-        &copy; {new Date().getFullYear()} SmartLine. {t.footer.rights || 'All rights reserved.'}
+        &copy; {new Date().getFullYear()} SmartLine.{" "}
+        {t.footer.rights || "All rights reserved."}
       </div>
     </footer>
-  )
+  );
 }

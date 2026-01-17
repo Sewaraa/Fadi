@@ -3,7 +3,6 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   params: any;
 }) {
   const { locale } = await params;

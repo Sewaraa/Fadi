@@ -48,7 +48,6 @@ export default function AboutPage() {
     <>
      <section className="relative w-full bg-black text-white px-4 py-28">
       <div className="mx-auto max-w-6xl">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,8 +61,6 @@ export default function AboutPage() {
             {t.about.subtitle}
           </p>
         </motion.div>
-
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {aboutSections.map((section, index) => (
             <motion.div
@@ -85,7 +82,6 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* Footer */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

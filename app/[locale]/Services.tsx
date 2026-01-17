@@ -39,7 +39,6 @@ export default function ServicesSection() {
     <section id="services" className="relative py-8 overflow-hidden
       bg-gradient-to-b from-black/90 via-yellow-900/10 to-black/80
     ">
-      {/* Gold Glow Overlay to blend with hero */}
       <div className="absolute inset-0 bg-black pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

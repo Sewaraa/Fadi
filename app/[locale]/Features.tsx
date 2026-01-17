@@ -23,16 +23,12 @@ export default function FeaturesTypingBoxes() {
   const [charIndex, setCharIndex] = useState(0);
   const [featureIndex, setFeatureIndex] = useState(0);
 
-  /* ===============================
-     Intersection Observer
-  =============================== */
   useEffect(() => {
     if (!sectionRef.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // reset animation when section enters
           setLines([]);
           setCurrentText("");
           setCharIndex(0);
@@ -50,9 +46,6 @@ export default function FeaturesTypingBoxes() {
     return () => observer.disconnect();
   }, []);
 
-  /* ===============================
-     Typing Effect
-  =============================== */
   useEffect(() => {
     if (!features.length || !isVisible) return;
 
@@ -102,12 +95,10 @@ export default function FeaturesTypingBoxes() {
         overflow-hidden
       "
     >
-      {/* Title */}
       <h2 className="mb-4 text-center text-3xl sm:text-4xl font-semibold tracking-tight text-gray-200">
         {t.features?.title ?? "Why Choose Us?"}
       </h2>
 
-      {/* Subtle Glow */}
       <div
         className="
           absolute top-0 inset-x-0 h-48
@@ -115,8 +106,6 @@ export default function FeaturesTypingBoxes() {
           pointer-events-none
         "
       />
-
-      {/* Previous Lines */}
       {lines.map((line, idx) => (
         <motion.div
           key={idx}
@@ -134,13 +123,9 @@ export default function FeaturesTypingBoxes() {
             border border-yellow-500/30
           "
         >
-          <p className="text-white text-xl md:text-2xl font-semibold">
-            {line}
-          </p>
+          <p className="text-white text-xl md:text-2xl font-semibold">{line}</p>
         </motion.div>
       ))}
-
-      {/* Active Line */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}

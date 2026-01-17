@@ -19,15 +19,12 @@ export default function CaseStudiesCreativeGrid() {
       className="relative w-full bg-black py-32 px-4 overflow-hidden"
     >
       <div className="mx-auto max-w-7xl">
-        {/* Header */}
         <div className="mb-28 text-center">
           <h2 className="text-5xl md:text-6xl font-extrabold text-white">
             {t.caseStudies.title}
           </h2>
           <p className="mt-4 text-gray-400 text-lg">{t.caseStudies.subtitle}</p>
         </div>
-
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
           {items.map((item, index) => {
             const motionProps = {
@@ -72,8 +69,6 @@ export default function CaseStudiesCreativeGrid() {
                     />
                   </div>
                 </div>
-
-                {/* Content */}
                 <div className="relative z-10 flex-1">
                  
                      <h3 className="text-3xl font-bold text-white mb-2">
@@ -90,8 +85,6 @@ export default function CaseStudiesCreativeGrid() {
                     {item.description}
                   </p>
                 </div>
-
-                {/* Live Demo Button */}
                 <motion.a
                   {...linkMotion}
                   href={item.liveDemo}
